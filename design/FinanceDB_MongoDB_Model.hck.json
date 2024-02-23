@@ -1,0 +1,474 @@
+{
+    "modelName": "New Model",
+    "collections": [
+        {
+            "collectionName": "Companies",
+            "type": "object",
+            "properties": [
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "7313b23e-ad98-459d-8b2f-4b5038f7b7e1",
+                    "name": "id",
+                    "error": {}
+                },
+                {
+                    "name": "cik",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "fd415b46-b3bd-4aa9-a3b4-5834ddbec962",
+                    "error": {}
+                },
+                {
+                    "name": "companyName",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "2206d1d6-b3f6-4f37-b590-ea18535153bc",
+                    "error": {}
+                },
+                {
+                    "name": "revenues",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "4eb0ff11-0be6-45e8-ae3e-d24a14f55360",
+                    "error": {}
+                },
+                {
+                    "name": "CostsAndExpenses",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "e40d33d6-85fd-4429-b21b-1c0c963ad372",
+                    "error": {}
+                },
+                {
+                    "name": "grossProfit",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "1a221641-334f-446b-a3ae-5bcfa7cc9511",
+                    "error": {}
+                },
+                {
+                    "name": "operatingIncomeLoss",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "92bc2072-58eb-47bb-b89f-bf73bdc9495d",
+                    "error": {}
+                },
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "5d89c33d-78ce-4c26-83ce-6cc860a4b07a",
+                    "name": "netIncomeLoss",
+                    "error": {}
+                },
+                {
+                    "name": "researchAndDevelopmentExpense",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "98041be2-9a54-463e-89cd-354c732582f1",
+                    "error": {}
+                },
+                {
+                    "name": "shareBasedCompensation",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "ef7fd6f0-2239-4e28-b50c-b6613869d931",
+                    "error": {}
+                },
+                {
+                    "name": "allocatedShareBasedCompensationExpense",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "b5ae1f41-f49c-499c-aa4b-a101e726edb1",
+                    "error": {}
+                },
+                {
+                    "name": "depreciation",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "dd1cb219-5b66-4589-ac12-9b4cb046ad9f",
+                    "error": {}
+                },
+                {
+                    "name": "marketingAndAdvertisingExpense",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "e55a821b-a90e-4fa3-b843-114425e5c0f9",
+                    "error": {}
+                },
+                {
+                    "name": "leaseAndRentalExpense",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "2340182e-8c38-4337-88c2-91213addd5e7",
+                    "error": {}
+                },
+                {
+                    "name": "interestExpense",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "28836cf5-9c9b-4e18-86ec-dbfb15863d8f",
+                    "error": {}
+                },
+                {
+                    "name": "entityCommonStockSharesOutstanding",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "3619335d-d9ef-4471-b48a-92fb38fb1432",
+                    "error": {}
+                },
+                {
+                    "name": "entityPublicFloat",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "c6c6c6c9-b782-4788-8ef3-e22a87c2e30e",
+                    "error": {}
+                },
+                {
+                    "name": "sellingAndMarketingExpense",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "7e6d7f73-10b2-4975-9ee2-d4f01a850c88",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "dcd51506-5adc-48d5-aa9f-7a6fd4c6a386"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "d9351859-0c3c-4c96-a5dc-788b6f905989",
+            "bucketId": "1c1f1ef9-5be5-4246-bfd5-a802f947292a"
+        },
+        {
+            "collectionName": "Finance",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "companyId",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "1a6a3518-fe13-40ef-9f6e-aab15a930211",
+                    "error": {}
+                },
+                {
+                    "name": "dataType",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "ce0d1289-9d7f-48bf-82d6-35ef3bab4a06",
+                    "error": {}
+                },
+                {
+                    "name": "value",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "9ac0b10e-8bab-4298-9141-2972383767da",
+                    "error": {}
+                },
+                {
+                    "name": "qtr",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "eb3a72c3-786e-41ff-9de9-1937145027f8",
+                    "error": {}
+                },
+                {
+                    "name": "year",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "ac38845c-161f-4f00-a53a-9da894bce4fe",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e95d562a-6375-4246-a62f-13e58405f8b2"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "887fb5bf-c2e4-43cc-9a1e-de80f7f4bc95",
+            "bucketId": "1c1f1ef9-5be5-4246-bfd5-a802f947292a"
+        },
+        {
+            "collectionName": "Revenues",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "companyId",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "286054a1-450f-4097-a04a-cda46c332393",
+                    "error": {}
+                },
+                {
+                    "name": "2017",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "097de5aa-d5d4-478e-887c-98789bc26dbf",
+                    "error": {}
+                },
+                {
+                    "name": "2017-Q1",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "2e3beee0-3040-4eee-be2b-3ca3955f63b8",
+                    "error": {}
+                },
+                {
+                    "name": "2017-Q2",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "a69d72cd-1a18-4f64-9903-32e131f33c88",
+                    "error": {}
+                },
+                {
+                    "name": "2017-Q3",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "761fec48-ef23-4973-97c8-d550a7a6375c",
+                    "error": {}
+                },
+                {
+                    "name": "2017-Q4",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "70b35045-e774-429a-998c-d80cd9fccc8b",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "a82e088e-f171-4897-8314-dd8357319c97"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "d2f28250-158b-4d49-9a16-4c079dd51611",
+            "bucketId": "1c1f1ef9-5be5-4246-bfd5-a802f947292a"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "FinanceDB",
+            "type": "bucket",
+            "collectionIds": [
+                "d9351859-0c3c-4c96-a5dc-788b6f905989",
+                "887fb5bf-c2e4-43cc-9a1e-de80f7f4bc95",
+                "d2f28250-158b-4d49-9a16-4c079dd51611"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "1c1f1ef9-5be5-4246-bfd5-a802f947292a"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "1c1f1ef9-5be5-4246-bfd5-a802f947292a": "FinanceDB",
+        "d9351859-0c3c-4c96-a5dc-788b6f905989": "Companies",
+        "7313b23e-ad98-459d-8b2f-4b5038f7b7e1": "id",
+        "2206d1d6-b3f6-4f37-b590-ea18535153bc": "companyName",
+        "fd415b46-b3bd-4aa9-a3b4-5834ddbec962": "cik",
+        "4eb0ff11-0be6-45e8-ae3e-d24a14f55360": "revenues",
+        "1a221641-334f-446b-a3ae-5bcfa7cc9511": "grossProfit",
+        "92bc2072-58eb-47bb-b89f-bf73bdc9495d": "operatingIncomeLoss",
+        "5d89c33d-78ce-4c26-83ce-6cc860a4b07a": "netIncomeLoss",
+        "98041be2-9a54-463e-89cd-354c732582f1": "researchAndDevelopmentExpense",
+        "7e6d7f73-10b2-4975-9ee2-d4f01a850c88": "sellingAndMarketingExpense",
+        "ef7fd6f0-2239-4e28-b50c-b6613869d931": "shareBasedCompensation",
+        "dd1cb219-5b66-4589-ac12-9b4cb046ad9f": "depreciation",
+        "b5ae1f41-f49c-499c-aa4b-a101e726edb1": "allocatedShareBasedCompensationExpense",
+        "28836cf5-9c9b-4e18-86ec-dbfb15863d8f": "interestExpense",
+        "2340182e-8c38-4337-88c2-91213addd5e7": "leaseAndRentalExpense",
+        "e55a821b-a90e-4fa3-b843-114425e5c0f9": "marketingAndAdvertisingExpense",
+        "3619335d-d9ef-4471-b48a-92fb38fb1432": "entityCommonStockSharesOutstanding",
+        "c6c6c6c9-b782-4788-8ef3-e22a87c2e30e": "entityPublicFloat",
+        "887fb5bf-c2e4-43cc-9a1e-de80f7f4bc95": "Finance",
+        "e40d33d6-85fd-4429-b21b-1c0c963ad372": "CostsAndExpenses",
+        "ac38845c-161f-4f00-a53a-9da894bce4fe": "year",
+        "eb3a72c3-786e-41ff-9de9-1937145027f8": "qtr",
+        "9ac0b10e-8bab-4298-9141-2972383767da": "value",
+        "1a6a3518-fe13-40ef-9f6e-aab15a930211": "companyId",
+        "ce0d1289-9d7f-48bf-82d6-35ef3bab4a06": "dataType",
+        "d2f28250-158b-4d49-9a16-4c079dd51611": "Revenues",
+        "a69d72cd-1a18-4f64-9903-32e131f33c88": "2017-Q2",
+        "70b35045-e774-429a-998c-d80cd9fccc8b": "2017-Q4",
+        "097de5aa-d5d4-478e-887c-98789bc26dbf": "2017",
+        "286054a1-450f-4097-a04a-cda46c332393": "companyId",
+        "2e3beee0-3040-4eee-be2b-3ca3955f63b8": "2017-Q1",
+        "761fec48-ef23-4973-97c8-d550a7a6375c": "2017-Q3"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "5d2eb877-478c-431e-ad23-555754afd133"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "b08a3c55-75e3-45ce-b5c1-2de7b569b3b6"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "7a251a95-0b15-49d5-9aa0-25be49a616c5"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v7.x",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2024-02-23T02:20:49.043Z",
+    "GUID": "80c7de7a-c69a-4e52-8c55-428a1c6efccf",
+    "isLineageEnabled": false,
+    "lastModifTS": "2024-02-23T03:00:33.622Z",
+    "persistenceSchemaVersion": "7",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "7.3.0"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "d9351859-0c3c-4c96-a5dc-788b6f905989",
+                        "x": 1008,
+                        "y": 1010,
+                        "width": 366,
+                        "height": 357,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "887fb5bf-c2e4-43cc-9a1e-de80f7f4bc95",
+                        "x": 1039,
+                        "y": 1377,
+                        "width": 191,
+                        "height": 123,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "d2f28250-158b-4d49-9a16-4c079dd51611",
+                        "x": 1288,
+                        "y": 1377,
+                        "width": 191,
+                        "height": 141,
+                        "color": {}
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
+                "buckets": [
+                    {
+                        "x": 968,
+                        "y": 970,
+                        "GUID": "1c1f1ef9-5be5-4246-bfd5-a802f947292a"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [],
+                "relationshipUpdateDisabled": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
