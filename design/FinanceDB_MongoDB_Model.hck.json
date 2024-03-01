@@ -55,11 +55,19 @@
             "type": "object",
             "properties": [
                 {
-                    "name": "companyId",
+                    "name": "recordId",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "type": "objectId",
                     "GUID": "1a6a3518-fe13-40ef-9f6e-aab15a930211",
+                    "error": {}
+                },
+                {
+                    "name": "cik",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "601f847c-dae0-4ebe-bd8b-30771a9fc0ae",
                     "error": {}
                 },
                 {
@@ -149,8 +157,9 @@
         "ac38845c-161f-4f00-a53a-9da894bce4fe": "year",
         "eb3a72c3-786e-41ff-9de9-1937145027f8": "qtr",
         "9ac0b10e-8bab-4298-9141-2972383767da": "value",
-        "1a6a3518-fe13-40ef-9f6e-aab15a930211": "companyId",
-        "ce0d1289-9d7f-48bf-82d6-35ef3bab4a06": "dataType"
+        "1a6a3518-fe13-40ef-9f6e-aab15a930211": "recordId",
+        "ce0d1289-9d7f-48bf-82d6-35ef3bab4a06": "dataType",
+        "601f847c-dae0-4ebe-bd8b-30771a9fc0ae": "cik"
     },
     "definitions": {
         "type": "definitions",
@@ -175,14 +184,14 @@
     "creationTS": "2024-02-23T02:20:49.043Z",
     "GUID": "80c7de7a-c69a-4e52-8c55-428a1c6efccf",
     "isLineageEnabled": false,
-    "lastModifTS": "2024-02-23T03:31:37.938Z",
+    "lastModifTS": "2024-02-28T01:26:00.444Z",
     "persistenceSchemaVersion": "7",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "7.3.0"
+        "version": "7.3.1"
     },
     "hackoladeMeta": {},
     "settings": {
@@ -201,8 +210,8 @@
                         "GUID": "887fb5bf-c2e4-43cc-9a1e-de80f7f4bc95",
                         "x": 1010.2307692307696,
                         "y": 1158.8333333333335,
-                        "width": 191,
-                        "height": 123,
+                        "width": 172,
+                        "height": 141,
                         "color": {}
                     }
                 ],
