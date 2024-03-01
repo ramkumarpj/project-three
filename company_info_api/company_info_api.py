@@ -2,16 +2,16 @@
 # Flask Routes
 #################################################
 
-@app.route("/api/finance/<cik>")
-def revenue(company_name):
+@app.route("/api/finance/<dataType>")
+def data(cik):
     session = Session(engine)
 
-    company = company_name.replace(" ", "")
-    sel = [company.value, company.qtr, company.year, company.cik, company.recordId]
+    data_type = dataType.replace(" ", "")
+    sel = data.recordId, data.cik, data.value, data.qtr, data.year
     results = session.query(*sel).\
-        filter(cik = company)
-    company_data = list(np.ravel(results))
-    return jsonify(company_data)
+        filter(dataType = data_type)
+    dataTypeList = list(np.ravel(results))
+    return jsonify(dataTypeList)
 
     session.close()
-
+about:blank#blocked
