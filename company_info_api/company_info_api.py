@@ -3,10 +3,10 @@
 #################################################
 
 @app.route("/api/finance/<cik>")
-def revenue(company_name):
+def revenue(cik):
     session = Session(engine)
 
-    company = company_name.replace(" ", "")
+    company = cik.replace(" ", "")
     sel = [company.value, company.qtr, company.year, company.cik, company.recordId]
     results = session.query(*sel).\
         filter(cik = company)
