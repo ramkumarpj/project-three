@@ -6,20 +6,13 @@ import pandas as pd
 # Create an instance of MongoClient
 mongo = MongoClient(port=27017)
 
-#################################################
-# Database Setup
-#################################################
-engine = create_engine("json://data/output/finance_data.json")
 
-# reflect an existing database into a new model
-Base = automap_base()
-Base.prepare(autoload_with = engine)
+# assign the uk_food database to a variable name
+db = mongo['FinanceDB']
 
-# reflect the tables
-print(Base.classes.keys())
-
-finance = Base.classes.finance
-companies = Base.classes.companies
+# assign the collection to a variable
+finance = db['finance']
+companies = db['companies']
 
 app = Flask(__name__)
 
@@ -29,242 +22,179 @@ app = Flask(__name__)
 
 @app.route("/api/v1.0/dataTypes")
 def dataType():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
-
-    """Return a list of all passenger names"""
-    # Query all passengers
-    results = session.query(finance.dataType).unique()
-
-    session.close()
+    types = finance.dataType.unique()
 
     # Convert list of tuples into normal list
-    all_dataTypes = list(np.ravel(results))
+    all_dataTypes = list(np.ravel(types))
 
     return jsonify(all_dataTypes)
 
 
 @app.route("/api/v1.0/SalesRevenueGoodsNet")
 def SRGN():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all SalesRevenueGoodsNet datatypes
+    query = {"dataType" : 'SalesRevenueGoodsNet'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'SalesRevenueGoodsNet').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/SalesRevenueServicesNet")
 def SRSN():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+   # Query all SalesRevenueServiesNet datatypes
+    query = {"dataType" : 'SalesRevenueServicesNet'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'SalesRevenueServicesNet').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/RevenueFromContractWithCustomerIncludingAssessedTax")
 def RevenueFromContract():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all RevenueFromContractWithCustomerIncludingAssessedTax datatypes
+    query = {"dataType" : 'RevenueFromContractWithCustomerIncludingAssessedTax'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'RevenueFromContractWithCustomerIncludingAssessedTax').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/GrossProfit")
 def GrossProfit():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all GrossProfit datatypes
+    query = {"dataType" : 'GrossProfit'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'GrossProfit').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/OperatingIncomeLoss")
 def OperatingIncomeLoss():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all OperatingIncomeLoss datatypes
+    query = {"dataType" : 'OperatingIncomeLoss'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'OperatingIncomeLoss').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/NetIncomeLoss")
 def NetIncomeLoss():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all NetIncomeLoss datatypes
+    query = {"dataType" : 'NetIncomeLoss'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'NetIncomeLoss').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 
 @app.route("/api/v1.0/ResearchAndDevelopmentExpense")
 def ResearchAndDevelopmentExpense():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all ResearchAndDevelopmentExpense datatypes
+    query = {"dataType" : 'ResearchAndDevelopmentExpense'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'ResearchAndDevelopmentExpense').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/ShareBasedCompensation")
 def ShareBasedCompensation():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all ShareBasedCompensation datatypes
+    query = {"dataType" : 'ShareBasedCompensation'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'ShareBasedCompensation').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/Depreciation")
 def Depreciation():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all Depreciation datatypes
+    query = {"dataType" : 'Depreciation'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'Depreciation').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/AllocatedShareBasedCompensationExpense")
 def ASBCE():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all AllocatedShareBasedCompensationExpense datatypes
+    query = {"dataType" : 'AllocatedShareBasedCompensationExpense'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'AllocatedShareBasedCompensationExpense').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/CostsAndExpenses")
 def CostsAndExpenses():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all CostsAndExpenses datatypes
+    query = {"dataType" : 'CostsAndExpenses'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'CostsAndExpenses').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/GeneralAndAdministrativeExpense")
 def GeneralAndAdministrativeExpense():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all GeneralAndAdminstrativeExpense datatypes
+    query = {"dataType" : 'GeneralAndAdministrativeExpense'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'GeneralAndAdministrativeExpense').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 
 @app.route("/api/v1.0/InterestExpense")
 def InterestExpense():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+   # Query all InterestExpense datatypes
+    query = {"dataType" : 'InterestExpense'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'InterestExpense').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/LeaseAndRentalExpense")
 def LeaseAndRentalExpense():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all LeaseAndRentalExpense datatypes
+    query = {"dataType" : 'LeaseAndRentalExpense'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'LeaseAndRentalExpense').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/MarketingAndAdvertisingExpense")
 def MarketingAndAdvertisingExpense():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all MarkertingAndAdvertisingExpense datatypes
+    query = {"dataType" : 'MarketingAndAdvertisingExpense'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'MarketingAndAdvertisingExpense').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 @app.route("/api/v1.0/OtherAccruedLiabilitiesCurrent")
 def OtherAccruedLiabilitiesCurrent():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all OtherAccruedLiabilitiesCurrent datatypes
+    query = {"dataType" : 'OtherAccruedLiabilitiesCurrent'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'OtherAccruedLiabilitiesCurrent').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 
 @app.route("/api/v1.0/EntityCommonStockSharesOutstanding")
 def EntityCommonStockSharesOutstanding():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all EntityCommonStockSharesOutstanding datatypes
+    query = {"dataType" : 'EntityCommonStockSharesOutstanding'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'EntityCommonStockSharesOutstanding').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
 
 
 @app.route("/api/v1.0/EntityPublicFloat")
 def EntityPublicFloat():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+    # Query all EntityPublicFloat datatypes
+    query = {"dataType" : 'EntityPublicFloat'}
 
-    # Query all SalesRevenueGoodsNet
-    results = session.query(all_dataTypes = 'EntityPublicFloat').all()
-
-    session.close()
+    results = finance.find(query)
     
     return jsonify(results)
-
-
 
 
 if __name__ == '__main__':
