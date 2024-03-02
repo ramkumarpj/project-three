@@ -37,7 +37,7 @@ def BHH():
     return jsonify(results)
 
 @app.route("/api/v1.0/Alphabet Inc.")
-def BHH():
+def AI():
     #Query all Alphabet Inc. data
     query = {"companyName": 'Alphabet Inc.'}
 
@@ -46,7 +46,7 @@ def BHH():
     return jsonify(results)
 
 @app.route("/api/v1.0/Kraft Heinz Co")
-def BHH():
+def KHC():
     #Query all Kraft Heinz Co data
     query = {"companyName": 'Kraft Heinz Co'}
 
