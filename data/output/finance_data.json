@@ -603,6 +603,223 @@
     },
     {
         "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 13082000000,
+        "qtr": 0,
+        "year": 2016
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 3064000000,
+        "qtr": 1.0,
+        "year": 2017
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 3015000000,
+        "qtr": 2.0,
+        "year": 2017
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5301000000,
+        "qtr": 3.0,
+        "year": 2017
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5799000000,
+        "qtr": 4.0,
+        "year": 2017
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 17179000000,
+        "qtr": 0,
+        "year": 2017
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5399000000,
+        "qtr": 1.0,
+        "year": 2018
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5548000000,
+        "qtr": 2.0,
+        "year": 2018
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5665000000,
+        "qtr": 3.0,
+        "year": 2018
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 22877000000,
+        "qtr": 0,
+        "year": 2018
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 6264000000,
+        "qtr": 4.0,
+        "year": 2018
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5615000000,
+        "qtr": 1,
+        "year": 2019
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5994000000,
+        "qtr": 2,
+        "year": 2019
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5882000000,
+        "qtr": 3,
+        "year": 2019
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 6347000000,
+        "qtr": 4.0,
+        "year": 2019
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 23838000000,
+        "qtr": 0,
+        "year": 2019
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5425000000,
+        "qtr": 1,
+        "year": 2020
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 4736000000,
+        "qtr": 2,
+        "year": 2020
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5049000000,
+        "qtr": 3,
+        "year": 2020
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 20705000000,
+        "qtr": 0,
+        "year": 2020
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 4782000000,
+        "qtr": 1,
+        "year": 2021
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5142000000,
+        "qtr": 2,
+        "year": 2021
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5093000000,
+        "qtr": 3,
+        "year": 2021
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 20502000000,
+        "qtr": 0,
+        "year": 2021
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 4835000000,
+        "qtr": 1,
+        "year": 2022
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5047000000,
+        "qtr": 2,
+        "year": 2022
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5369000000,
+        "qtr": 3,
+        "year": 2022
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 21156000000,
+        "qtr": 0,
+        "year": 2022
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 5716000000,
+        "qtr": 1,
+        "year": 2023
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 6315000000,
+        "qtr": 2,
+        "year": 2023
+    },
+    {
+        "cik": "808362",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 6641000000,
+        "qtr": 3,
+        "year": 2023
+    },
+    {
+        "cik": "808362",
         "dataType": "GrossProfit",
         "value": 599000000,
         "qtr": 1.0,
@@ -1458,15 +1675,15 @@
     {
         "cik": "808362",
         "dataType": "NetIncomeLoss",
-        "value": 84000000,
-        "qtr": 4.0,
+        "value": 421000000,
+        "qtr": 0,
         "year": 2009
     },
     {
         "cik": "808362",
         "dataType": "NetIncomeLoss",
-        "value": 421000000,
-        "qtr": 0,
+        "value": 84000000,
+        "qtr": 4.0,
         "year": 2009
     },
     {
@@ -4250,6 +4467,209 @@
     },
     {
         "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 90272000000,
+        "qtr": 0,
+        "year": 2016
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 24750000000,
+        "qtr": 1,
+        "year": 2017
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 26010000000,
+        "qtr": 2,
+        "year": 2017
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 27772000000,
+        "qtr": 3,
+        "year": 2017
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 110855000000,
+        "qtr": 0,
+        "year": 2017
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 31146000000,
+        "qtr": 1,
+        "year": 2018
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 32657000000,
+        "qtr": 2,
+        "year": 2018
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 33740000000,
+        "qtr": 3,
+        "year": 2018
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 136819000000,
+        "qtr": 0,
+        "year": 2018
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 36339000000,
+        "qtr": 1,
+        "year": 2019
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 38944000000,
+        "qtr": 2,
+        "year": 2019
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 40499000000,
+        "qtr": 3,
+        "year": 2019
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 161857000000,
+        "qtr": 0,
+        "year": 2019
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 41159000000,
+        "qtr": 1,
+        "year": 2020
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 38297000000,
+        "qtr": 2,
+        "year": 2020
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 46173000000,
+        "qtr": 3,
+        "year": 2020
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 182527000000,
+        "qtr": 0,
+        "year": 2020
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 55314000000,
+        "qtr": 1,
+        "year": 2021
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 61880000000,
+        "qtr": 2,
+        "year": 2021
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 65118000000,
+        "qtr": 3,
+        "year": 2021
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 257637000000,
+        "qtr": 0,
+        "year": 2021
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 68011000000,
+        "qtr": 1,
+        "year": 2022
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 69685000000,
+        "qtr": 2,
+        "year": 2022
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 69092000000,
+        "qtr": 3,
+        "year": 2022
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 282836000000,
+        "qtr": 0,
+        "year": 2022
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 69787000000,
+        "qtr": 1,
+        "year": 2023
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 74604000000,
+        "qtr": 2,
+        "year": 2023
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 76693000000,
+        "qtr": 3,
+        "year": 2023
+    },
+    {
+        "cik": "1652044",
+        "dataType": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "value": 307394000000,
+        "qtr": 0,
+        "year": 2023
+    },
+    {
+        "cik": "1652044",
         "dataType": "OperatingIncomeLoss",
         "value": 15403000000,
         "qtr": 0,
@@ -7029,6 +7449,41 @@
     },
     {
         "cik": "1637459",
+        "dataType": "Revenues",
+        "value": 18271000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "Revenues",
+        "value": 4513000000,
+        "qtr": 1.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "Revenues",
+        "value": 18218000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "Revenues",
+        "value": 4362000000,
+        "qtr": 1.0,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "Revenues",
+        "value": 18205000000,
+        "qtr": 4.0,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
         "dataType": "SalesRevenueGoodsNet",
         "value": 2800000000,
         "qtr": 1.0,
@@ -7345,6 +7800,34 @@
     {
         "cik": "1637459",
         "dataType": "GrossProfit",
+        "value": 5772000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "GrossProfit",
+        "value": 1470000000,
+        "qtr": 1.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "GrossProfit",
+        "value": 6823000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "GrossProfit",
+        "value": 1560000000,
+        "qtr": 1.0,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "GrossProfit",
         "value": 812000000,
         "qtr": 1.0,
         "year": 2014
@@ -7361,6 +7844,13 @@
         "dataType": "GrossProfit",
         "value": 2382000000,
         "qtr": 3,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "GrossProfit",
+        "value": 4845000000,
+        "qtr": 4.0,
         "year": 2014
     },
     {
@@ -7611,6 +8101,20 @@
     {
         "cik": "1637459",
         "dataType": "OperatingIncomeLoss",
+        "value": 2670000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "OperatingIncomeLoss",
+        "value": 4591000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "OperatingIncomeLoss",
         "value": 807000000,
         "qtr": 2,
         "year": 2014
@@ -7620,6 +8124,13 @@
         "dataType": "OperatingIncomeLoss",
         "value": 1216000000,
         "qtr": 3,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "OperatingIncomeLoss",
+        "value": 1890000000,
+        "qtr": 4.0,
         "year": 2014
     },
     {
@@ -7856,6 +8367,34 @@
     {
         "cik": "1637459",
         "dataType": "NetIncomeLoss",
+        "value": 1642000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "NetIncomeLoss",
+        "value": 456000000,
+        "qtr": 1.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "NetIncomeLoss",
+        "value": 2715000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "NetIncomeLoss",
+        "value": 513000000,
+        "qtr": 1.0,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "NetIncomeLoss",
         "value": 322000000,
         "qtr": 2,
         "year": 2014
@@ -7865,6 +8404,13 @@
         "dataType": "NetIncomeLoss",
         "value": 494000000,
         "qtr": 3,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "NetIncomeLoss",
+        "value": 1043000000,
+        "qtr": 4.0,
         "year": 2014
     },
     {
@@ -8115,6 +8661,27 @@
     {
         "cik": "1637459",
         "dataType": "ResearchAndDevelopmentExpense",
+        "value": 143000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "ResearchAndDevelopmentExpense",
+        "value": 142000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "ResearchAndDevelopmentExpense",
+        "value": 149000000,
+        "qtr": 4.0,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "ResearchAndDevelopmentExpense",
         "value": 58000000,
         "qtr": 4.0,
         "year": 2014
@@ -8185,6 +8752,20 @@
     {
         "cik": "1637459",
         "dataType": "ShareBasedCompensation",
+        "value": 54000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "ShareBasedCompensation",
+        "value": 65000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "ShareBasedCompensation",
         "value": 2000000,
         "qtr": 2,
         "year": 2014
@@ -8194,6 +8775,13 @@
         "dataType": "ShareBasedCompensation",
         "value": 6000000,
         "qtr": 3,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "ShareBasedCompensation",
+        "value": 95000000,
+        "qtr": 4.0,
         "year": 2014
     },
     {
@@ -8395,8 +8983,29 @@
     {
         "cik": "1637459",
         "dataType": "Depreciation",
+        "value": 428000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "Depreciation",
+        "value": 393000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "Depreciation",
         "value": 284000000,
         "qtr": 2,
+        "year": 2014
+    },
+    {
+        "cik": "1637459",
+        "dataType": "Depreciation",
+        "value": 384000000,
+        "qtr": 4.0,
         "year": 2014
     },
     {
@@ -8699,6 +9308,27 @@
         "value": 912000000,
         "qtr": 0,
         "year": 2023
+    },
+    {
+        "cik": "1637459",
+        "dataType": "LeaseAndRentalExpense",
+        "value": 150000000,
+        "qtr": 0,
+        "year": 2012
+    },
+    {
+        "cik": "1637459",
+        "dataType": "LeaseAndRentalExpense",
+        "value": 176000000,
+        "qtr": 4.0,
+        "year": 2013
+    },
+    {
+        "cik": "1637459",
+        "dataType": "LeaseAndRentalExpense",
+        "value": 148000000,
+        "qtr": 4.0,
+        "year": 2014
     },
     {
         "cik": "1637459",
