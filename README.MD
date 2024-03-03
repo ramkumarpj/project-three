@@ -109,7 +109,7 @@ sample_finance_query = {
 
 ## MongoDB Atlas
 
-MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing managed MongoDB instance, there is a **Charts** feature which can used to create charts based on the data data available in MongoDB database. 
+MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing managed MongoDB instance, there is a **Charts** feature which can used to create charts based on the data available in MongoDB database. 
 
 * [S&P 500 Dashboard](https://charts.mongodb.com/charts-project-0-uzzhy/public/dashboards/e915b487-9d16-40d0-b721-fc4991110089)
 * [Google Dashboard](https://charts.mongodb.com/charts-project-0-uzzhy/public/dashboards/65e13bf2-3629-42b0-838a-414a7900f716)
