@@ -1,8 +1,11 @@
+##
+# API code for Finance Data
+##
 # Import dependencies
 import numpy as np 
 from bson.json_util import dumps
 from pymongo import MongoClient
-from flask import Flask, jsonify, request
+from flask import Flask, request
 import json
 
 # Create an instance of MongoClient
@@ -17,8 +20,7 @@ finance = db['finance']
 
 app = Flask(__name__)
 
-# define finance query
-
+# define sample finance query
 sample_finance_query = {
     "finance_data_query" : {
         "dataType" : ["NetIncomeLoss"],
@@ -27,9 +29,12 @@ sample_finance_query = {
         "cik" : [1551152, 4977]
     } 
 }
+
 #################################################
 # Flask Routes
 #################################################
+
+# Home Route
 @app.route("/")
 def home():
     """List all available api routes."""
@@ -40,13 +45,18 @@ def home():
     )
 
 
+# Route to query finance data
 @app.route("/api/v1.0/finance/query", methods=["POST"])
 def finance_query():
+    
+    # Retrieve query provided in the body of the POST request
     finance_query = json.loads(request.data)
     print(finance_query)
     
+    # Define query dictionary
     query = {}
     
+    # Configure query variable according to the input query received 
     if 'dataType' in finance_query['finance_data_query']:
         query['dataType'] = { "$in" : finance_query['finance_data_query']['dataType'] }
     
@@ -60,7 +70,10 @@ def finance_query():
         query['cik'] = { "$in" : finance_query['finance_data_query']['cik'] }
         
     print(query)
+    
+    # Query the database
     results = finance.find(query, {"_id" : 0})
+    
     return dumps(results)
         
 

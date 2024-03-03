@@ -65,7 +65,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/api/v1.0/company/ticker/aapl",
+							"raw": "http://127.0.0.1:5000/api/v1.0/company/ticker/hpq",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -79,7 +79,7 @@
 								"v1.0",
 								"company",
 								"ticker",
-								"aapl"
+								"hpq"
 							]
 						}
 					},
