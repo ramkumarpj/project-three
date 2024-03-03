@@ -96,7 +96,7 @@ Following route is available:
 
 * api/v1.0/finance/query - Retrieve finance data based on the query input
 
-Here is a sample finance query that pulls 'NetIncomeLoss' data for year 2023 for CIKs 1551152 & 4977\
+Here is a sample finance query that pulls 'NetIncomeLoss' data for year 2023 for CIKs 1551152 & 4977
 
 sample_finance_query = {
     "finance_data_query" : {
