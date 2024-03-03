@@ -19,7 +19,7 @@ For this project we researched financial records provided by the SEC. The record
 
 * **SEC Form 10Q** - Quarterly Report - It is a comprehensive quarterly report of financial performance submitted by all public companies to the SEC.
 
-* **SEC Form 10K** - Annual Report - It is a a comprehensive report filed annually by a publicly-traded company about its financial performance.
+* **SEC Form 10K** - Annual Report - It is a comprehensive report filed annually by a publicly-traded company about its financial performance.
 
 * **SEC Form 10Q A** - Quarterly Report Amendment. 
 
