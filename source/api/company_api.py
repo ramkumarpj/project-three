@@ -1,5 +1,9 @@
+##
+# API code for Company Data
+##
 # Import dependencies
 from pymongo import MongoClient
+from bson.json_util import dumps
 from flask import Flask, jsonify
 import numpy as np
 
@@ -10,7 +14,6 @@ mongo = MongoClient(port=27017)
 db = mongo['FinanceDB']
 
 # Assign the collection to a variable
-finance = db['finance']
 companies = db['companies']
 
 # Initialize Flask app
@@ -20,38 +23,76 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 
-@app.route("/api/v1.0/company_name")
-def company_name():
-    types = companies.distinct("companyName")
+# Default Home route
+@app.route("/")
+def home():
+     
+     print("request received for home route")
+     
+     print("""List all available api routes.""")
+     
+     return (
+        f"Available Routes:</br>"
+        f"/api/v1.0/company/all</br>"
+        f"/api/v1.0/company/ticker/</br>"
+        f"/api/v1.0/company/name/</br>"
+        f"/api/v1.0/company/sector/</br>"
+        f"/api/v1.0/company/subindustry/</br>"
+        f"/api/v1.0/company/hqlocation/</br>"
+        f"/api/v1.0/company/cik/</br>"
+        )
 
-    return jsonify(types)
+@app.route("/api/v1.0/company/all")
+def all_companies():
+    result = companies.find({}, {"_id" : 0})
+    return dumps(result)
 
-@app.route("/api/v1.0/Baker_Hughes_Holdings_LLC")
-def bhh():
-    # Query all Baker Hughes Holding LLC data
-    query = {"companyName": 'Baker Hughes Holdings LLC'}
+@app.route("/api/v1.0/company/ticker/<string:ticker>")
+def company_by_ticker(ticker: str):
+      
+    query = {"Symbol": ticker.upper()}
+    results = companies.find(query, {"_id" : 0})
+    return dumps(results)
 
-    results = companies.find(query)
+@app.route("/api/v1.0/company/name/<string:name>")
+def company_by_name(name: str):
+    
+    query = {"Security": { "$regex" : name, "$options" : "i"}}
+    results = companies.find(query, {"_id" : 0})
+    return dumps(results)
 
-    return jsonify(list(results))
+@app.route("/api/v1.0/company/sector/<string:sector>")
+def company_by_sector(sector: str):
+    
+    query = {"GICS_Sector": { "$regex" : sector, "$options" : "i"}}
+    results = companies.find(query, {"_id" : 0})
+    return dumps(results)
 
-@app.route("/api/v1.0/Alphabet_Inc")
-def ai():
-    # Query all Alphabet Inc. data
-    query = {"companyName": 'Alphabet Inc.'}
+@app.route("/api/v1.0/company/subindustry/<string:subindustry>")
+def company_by_subindustry(subindustry: str):
+    
+    query = {"GICS Sub_Industry": { "$regex" : subindustry, "$options" : "i"}}
+    results = companies.find(query, {"_id" : 0})
+    return dumps(results)
 
-    results = companies.find(query)
+@app.route("/api/v1.0/company/hqlocation/<string:hqlocation>")
+def company_by_hqlocation(hqlocation: str):
+    
+    query = {"HQ Location": { "$regex" : hqlocation, "$options" : "i"}}
+    results = companies.find(query, {"_id" : 0})
+    return dumps(results)
 
-    return jsonify(list(results))
-
-@app.route("/api/v1.0/Kraft_Heinz_Co")
-def khc():
-    # Query all Kraft Heinz Co data
-    query = {"companyName": 'Kraft Heinz Co'}
-
-    results = companies.find(query)
-
-    return jsonify(list(results))
+@app.route("/api/v1.0/company/cik/<int:cik>")
+def company_by_cik(cik: int):
+    
+    query = {"CIK": cik }
+    results = companies.find(query, {"_id" : 0})
+    return dumps(results)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+    mongo.close()
+    print("session closed")

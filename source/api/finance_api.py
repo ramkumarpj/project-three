@@ -2,21 +2,31 @@
 import numpy as np 
 from bson.json_util import dumps
 from pymongo import MongoClient
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
+import json
 
 # Create an instance of MongoClient
 mongo = MongoClient(port=27017)
 
 
-# assign the uk_food database to a variable name
+# assign the FinanceDB database to a variable name
 db = mongo['FinanceDB']
 
 # assign the collection to a variable
 finance = db['finance']
-companies = db['companies']
 
 app = Flask(__name__)
 
+# define finance query
+
+sample_finance_query = {
+    "finance_data_query" : {
+        "dataType" : ["NetIncomeLoss"],
+        "qtr" : 0,
+        "year" : 2023,
+        "cik" : [1551152, 4977]
+    } 
+}
 #################################################
 # Flask Routes
 #################################################
@@ -25,180 +35,40 @@ def home():
     """List all available api routes."""
     return (
         f"Available Routes:</br>"
-        f"/api/v1.0/SalesRevenueGoodsNet</br>"
-        f"/api/v1.0/SalesRevenueServicesNet</br>"
-        f"/api/v1.0/RevenueFromContractWithCustomerIncludingAssessedTax</br>"
-        f"/api/v1.0/GrossProfit</br>"
-        f"/api/v1.0/OperatingIncomeLoss</br>"
-        f"/api/v1.0/NetIncomeLoss</br>"
-        f"/api/v1.0/ResearchAndDevelopmentExpense</br>"
-        f"/api/v1.0/ShareBasedCompensation</br>"
-        f"/api/v1.0/Depreciation</br>"
-        f"/api/v1.0/AllocatedShareBasedCompensationExpense</br>"
-        f"/api/v1.0/CostsAndExpenses</br>"
-        f"/api/v1.0/GeneralAndAdministrativeExpense</br>"
-        f"/api/v1.0/InterestExpense</br>"
-        f"/api/v1.0/LeaseAndRentalExpense</br>"
-        f"/api/v1.0/MarketingAndAdvertisingExpense</br>"
-        f"/api/v1.0/OtherAccruedLiabilitiesCurrent</br>"
-        f"/api/v1.0/EntityCommonStockSharesOutstanding</br>"
-        f"/api/v1.0/EntityPublicFloat</br>"
+        f"/api/v1.0/finance/query</br>"
+        f"Query String in POST Body : {sample_finance_query}"
     )
 
-@app.route("/api/v1.0/SalesRevenueGoodsNet")
-def SRGN():
-    # Query all SalesRevenueGoodsNet datatypes
-    query = {"dataType" : "SalesRevenueGoodsNet"}
-    results = finance.find(query)
-    all_results = dumps((results))
-    return jsonify(all_results)
+
+@app.route("/api/v1.0/finance/query", methods=["POST"])
+def finance_query():
+    finance_query = json.loads(request.data)
+    print(finance_query)
+    
+    query = {}
+    
+    if 'dataType' in finance_query['finance_data_query']:
+        query['dataType'] = { "$in" : finance_query['finance_data_query']['dataType'] }
+    
+    if 'qtr' in finance_query['finance_data_query']:
+        query['qtr'] = finance_query['finance_data_query']['qtr']
+    
+    if 'year' in finance_query['finance_data_query']:
+        query['year'] = finance_query['finance_data_query']['year']
+    
+    if 'cik' in finance_query['finance_data_query']:
+        query['cik'] = { "$in" : finance_query['finance_data_query']['cik'] }
+        
+    print(query)
+    results = finance.find(query, {"_id" : 0})
+    return dumps(results)
+        
 
     
-
-@app.route("/api/v1.0/SalesRevenueServicesNet")
-def SRSN():
-   # Query all SalesRevenueServiesNet datatypes
-    query = {'dataType' : 'SalesRevenueServicesNet'}
-    results = finance.find(query)
-    all_results = dumps((results))
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/RevenueFromContractWithCustomerIncludingAssessedTax")
-def RevenueFromContract():
-    # Query all RevenueFromContractWithCustomerIncludingAssessedTax datatypes
-    query = {'dataType' : 'RevenueFromContractWithCustomerIncludingAssessedTax'}
-    results = finance.find(query)
-    all_results = dumps((results))
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/GrossProfit")
-def GrossProfit():
-    # Query all GrossProfit datatypes
-    query = {'dataType': 'GrossProfit'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/OperatingIncomeLoss")
-def OperatingIncomeLoss():
-    # Query all OperatingIncomeLoss datatypes
-    query = {'dataType' : 'OperatingIncomeLoss'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/NetIncomeLoss")
-def NetIncomeLoss():
-    # Query all NetIncomeLoss datatypes
-    query = {'dataType' : 'NetIncomeLoss'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-
-@app.route("/api/v1.0/ResearchAndDevelopmentExpense")
-def ResearchAndDevelopmentExpense():
-    # Query all ResearchAndDevelopmentExpense datatypes
-    query = {'dataType' : 'ResearchAndDevelopmentExpense'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/ShareBasedCompensation")
-def ShareBasedCompensation():
-    # Query all ShareBasedCompensation datatypes
-    query = {'dataType' : 'ShareBasedCompensation'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/Depreciation")
-def Depreciation():
-    # Query all Depreciation datatypes
-    query = {'dataType' : 'Depreciation'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/AllocatedShareBasedCompensationExpense")
-def ASBCE():
-    # Query all AllocatedShareBasedCompensationExpense datatypes
-    query = {'dataType' : 'AllocatedShareBasedCompensationExpense'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/CostsAndExpenses")
-def CostsAndExpenses():
-    # Query all CostsAndExpenses datatypes
-    query = {'dataType' : 'CostsAndExpenses'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/GeneralAndAdministrativeExpense")
-def GeneralAndAdministrativeExpense():
-    # Query all GeneralAndAdminstrativeExpense datatypes
-    query = {'dataType' : 'GeneralAndAdministrativeExpense'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-
-@app.route("/api/v1.0/InterestExpense")
-def InterestExpense():
-   # Query all InterestExpense datatypes
-    query = {'dataType ': 'InterestExpense'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/LeaseAndRentalExpense")
-def LeaseAndRentalExpense():
-    # Query all LeaseAndRentalExpense datatypes
-    query = {'dataType' : 'LeaseAndRentalExpense'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/MarketingAndAdvertisingExpense")
-def MarketingAndAdvertisingExpense():
-    # Query all MarkertingAndAdvertisingExpense datatypes
-    query = {'dataType' : 'MarketingAndAdvertisingExpense'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-@app.route("/api/v1.0/OtherAccruedLiabilitiesCurrent")
-def OtherAccruedLiabilitiesCurrent():
-    # Query all OtherAccruedLiabilitiesCurrent datatypes
-    query = {'dataType' : 'OtherAccruedLiabilitiesCurrent'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-
-@app.route("/api/v1.0/EntityCommonStockSharesOutstanding")
-def EntityCommonStockSharesOutstanding():
-    # Query all EntityCommonStockSharesOutstanding datatypes
-    query = {'dataType' : 'EntityCommonStockSharesOutstanding'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
-
-@app.route("/api/v1.0/EntityPublicFloat")
-def EntityPublicFloat():
-    # Query all EntityPublicFloat datatypes
-    query = {'dataType' : 'EntityPublicFloat'}
-    results = finance.find(query)
-    all_results = dumps(results)
-    return jsonify(all_results)
-
+if __name__ == '__main__':
+    app.run(debug=True, port=5001)
 
 @app.teardown_appcontext
 def shutdown_session(exception=None):
+    mongo.close()
     print("session closed")
-    
-if __name__ == '__main__':
-    app.run(debug=True)
