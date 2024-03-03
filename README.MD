@@ -30,7 +30,7 @@ For this project we researched financial records provided by the SEC. The record
 2. Finance data of companies as reported to SEC - https://data.sec.gov/api/xbrl/companyfacts/CIK0001701605.json 
 
 * Sample data format of finance data as recevied from SEC Data API
-![[Image Info]](attachment:./source/etl/image.png)
+![Image Info](attachment:./source/etl/image.png)
 
 ## Database Design
 
