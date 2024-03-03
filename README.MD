@@ -105,8 +105,71 @@ MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing 
 * [S&P 500 Dashboard](https://charts.mongodb.com/charts-project-0-uzzhy/public/dashboards/e915b487-9d16-40d0-b721-fc4991110089)
 * [Google Dashboard](https://charts.mongodb.com/charts-project-0-uzzhy/public/dashboards/65e13bf2-3629-42b0-838a-414a7900f716)
 
+## Files
+
+**Data**
+
+* Input Data -
+   - ./data/Input/Sp500.csv
+
+* Output Data -
+   - ./data/output/finance_data.json
+   - ./data/output/company_data.json
+
+**Source**
+
+* Jupyter Notebook used for analysing SEC Data
+  - source/analysis/SECFinanceData_Analysis.ipynb
+
+* Jupyter Notebook used for extracting list of S&P 500 companies
+  - source/SP500/S&P500 Info.ipynb
+
+* Jupyter Notebook used for ETL of SEC finance data
+  - source/etl/SECFinanceData_ETL.ipynb
+
+* Python files for API 
+  - source/api/company_api.py
+  - source/api/finance_api.py
+
+* Postman scripts for testing API
+  - source/api/postman-tests/Project-3.postman_collection.json
+
+**DB Design** 
+* File saved from https://studio.hackolade.com/- ./design/FinanceDB_MongoDB_Model.hck.json
+
+* Database Documentation - ./design/FinanceDB_Design.pdf, ./design/Database_Design.png
+
+**Project Proposal**
+* ./project\ proposal/SEC Finance_Project3.pdf
+
+## Run Instructions
+
+* Open [**S&P500 Info.ipynb**](./source/SP500/S&P500 Info.ipynb) file using Jupyter Notebook
+  - Click on 'Cell > Run All' to run
+  - This will create S&P 500 csv file under 'data/input' folder
+
+* Open [**SECFinanceData_ETL.ipynb**](./source/etl/SECFinanceData_ETL.ipynb) file using Jupyter Notebook
+  - Click on 'Cell > Run All' to run
+  - This will create output files under 'data/output' folder
+
+* Data files to be loaded into the MongoDB database are under the directory - data/output
+* Use below commands to import collections to the MongoDB database
+* `mongoimport --type json -d FinanceDB -c companies --drop --jsonArray company_data.json`
+* `mongoimport --type json -d FinanceDB -c finance --drop --jsonArray finance_data.json`
+
+* Open 2 terminals to run API endpoints. The source is located under 'source/api'
+* `python company_api.py`
+* `python finance_api.py`
+
+* Use Postman tool to test the API
+* The postman test scripts are located under 'source/api/postman-tests'
 
 ## References:
 * https://www.sec.gov/edgar/sec-api-documentation
+
+# Disclaimer
+This repo was published for educational purposes only. Copyright 2024 edX Boot Camps LLC. All rights reserved.
+
+
 
 
