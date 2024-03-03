@@ -87,7 +87,8 @@ Following route is available:
 
 * api/v1.0/finance/query - Retrieve finance data based on the query input
 
-Here is a sample finance query that pulls 'NetIncomeLoss' data for year 2023 for CIKs 1551152 & 4977
+Here is a sample finance query that pulls 'NetIncomeLoss' data for year 2023 for CIKs 1551152 & 4977\
+
 sample_finance_query = {
     "finance_data_query" : {
         "dataType" : ["NetIncomeLoss"],
@@ -96,6 +97,13 @@ sample_finance_query = {
         "cik" : [1551152, 4977]
     } 
 }
+
+## MongoDB Atlas
+
+MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing managed MongoDB instance, there is a **Charts** feature which can used to create charts based on the data data available in MongoDB database. 
+
+* ![S&P 500 Dashboard](https://charts.mongodb.com/charts-project-0-uzzhy/public/dashboards/e915b487-9d16-40d0-b721-fc4991110089)
+* ![Google Dashboard](https://charts.mongodb.com/charts-project-0-uzzhy/public/dashboards/65e13bf2-3629-42b0-838a-414a7900f716)
 
 
 ## References:
