@@ -10,7 +10,7 @@
                     "isActivated": true,
                     "type": "objectId",
                     "GUID": "7313b23e-ad98-459d-8b2f-4b5038f7b7e1",
-                    "name": "id",
+                    "name": "_id",
                     "error": {}
                 },
                 {
@@ -27,6 +27,46 @@
                     "isActivated": true,
                     "type": "string",
                     "GUID": "2206d1d6-b3f6-4f37-b590-ea18535153bc",
+                    "error": {}
+                },
+                {
+                    "name": "ticker",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "755ca967-793a-4da8-930f-3af19d0a756f",
+                    "error": {}
+                },
+                {
+                    "name": "sector",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "cda37ce5-1201-4ead-905a-87c965d54fd3",
+                    "error": {}
+                },
+                {
+                    "name": "subIndustry",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "bd52e8fe-51d5-4dfb-a872-1c4176e88535",
+                    "error": {}
+                },
+                {
+                    "name": "hqLocation",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "370e90eb-1e98-4902-9104-4a4c8b9693c6",
+                    "error": {}
+                },
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "037624c6-3a39-4df6-b8fe-59382dd876d3",
+                    "name": "dateAdded",
                     "error": {}
                 }
             ],
@@ -55,7 +95,7 @@
             "type": "object",
             "properties": [
                 {
-                    "name": "recordId",
+                    "name": "_id",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "type": "objectId",
@@ -150,16 +190,21 @@
     "idToNameHashTable": {
         "1c1f1ef9-5be5-4246-bfd5-a802f947292a": "FinanceDB",
         "d9351859-0c3c-4c96-a5dc-788b6f905989": "Companies",
-        "7313b23e-ad98-459d-8b2f-4b5038f7b7e1": "id",
-        "2206d1d6-b3f6-4f37-b590-ea18535153bc": "companyName",
-        "fd415b46-b3bd-4aa9-a3b4-5834ddbec962": "cik",
+        "7313b23e-ad98-459d-8b2f-4b5038f7b7e1": "_id",
         "887fb5bf-c2e4-43cc-9a1e-de80f7f4bc95": "Finance",
         "ac38845c-161f-4f00-a53a-9da894bce4fe": "year",
         "eb3a72c3-786e-41ff-9de9-1937145027f8": "qtr",
         "9ac0b10e-8bab-4298-9141-2972383767da": "value",
-        "1a6a3518-fe13-40ef-9f6e-aab15a930211": "recordId",
+        "1a6a3518-fe13-40ef-9f6e-aab15a930211": "_id",
         "ce0d1289-9d7f-48bf-82d6-35ef3bab4a06": "dataType",
-        "601f847c-dae0-4ebe-bd8b-30771a9fc0ae": "cik"
+        "601f847c-dae0-4ebe-bd8b-30771a9fc0ae": "cik",
+        "cda37ce5-1201-4ead-905a-87c965d54fd3": "sector",
+        "2206d1d6-b3f6-4f37-b590-ea18535153bc": "companyName",
+        "370e90eb-1e98-4902-9104-4a4c8b9693c6": "hqLocation",
+        "037624c6-3a39-4df6-b8fe-59382dd876d3": "dateAdded",
+        "bd52e8fe-51d5-4dfb-a872-1c4176e88535": "subIndustry",
+        "755ca967-793a-4da8-930f-3af19d0a756f": "ticker",
+        "fd415b46-b3bd-4aa9-a3b4-5834ddbec962": "cik"
     },
     "definitions": {
         "type": "definitions",
@@ -184,14 +229,14 @@
     "creationTS": "2024-02-23T02:20:49.043Z",
     "GUID": "80c7de7a-c69a-4e52-8c55-428a1c6efccf",
     "isLineageEnabled": false,
-    "lastModifTS": "2024-02-28T01:26:00.444Z",
+    "lastModifTS": "2024-03-03T17:31:46.446Z",
     "persistenceSchemaVersion": "7",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "7.3.1"
+        "version": "7.3.2"
     },
     "hackoladeMeta": {},
     "settings": {
@@ -203,13 +248,13 @@
                         "x": 1008,
                         "y": 1010,
                         "width": 206,
-                        "height": 87,
+                        "height": 177,
                         "color": {}
                     },
                     {
                         "GUID": "887fb5bf-c2e4-43cc-9a1e-de80f7f4bc95",
-                        "x": 1010.2307692307696,
-                        "y": 1158.8333333333335,
+                        "x": 1023.2307692307696,
+                        "y": 1206.8333333333335,
                         "width": 172,
                         "height": 141,
                         "color": {}

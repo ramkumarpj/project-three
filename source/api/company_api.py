@@ -52,7 +52,7 @@ def all_companies():
 @app.route("/api/v1.0/company/ticker/<string:ticker>")
 def company_by_ticker(ticker: str):
       
-    query = {"Symbol": ticker.upper()}
+    query = {"ticker": ticker.upper()}
     results = companies.find(query, {"_id" : 0})
     return dumps(results)
 
@@ -60,7 +60,7 @@ def company_by_ticker(ticker: str):
 @app.route("/api/v1.0/company/name/<string:name>")
 def company_by_name(name: str):
     
-    query = {"Security": { "$regex" : name, "$options" : "i"}}
+    query = {"companyName": { "$regex" : name, "$options" : "i"}}
     results = companies.find(query, {"_id" : 0})
     return dumps(results)
 
@@ -68,7 +68,7 @@ def company_by_name(name: str):
 @app.route("/api/v1.0/company/sector/<string:sector>")
 def company_by_sector(sector: str):
     
-    query = {"GICS_Sector": { "$regex" : sector, "$options" : "i"}}
+    query = {"sector": { "$regex" : sector, "$options" : "i"}}
     results = companies.find(query, {"_id" : 0})
     return dumps(results)
 
@@ -76,7 +76,7 @@ def company_by_sector(sector: str):
 @app.route("/api/v1.0/company/subindustry/<string:subindustry>")
 def company_by_subindustry(subindustry: str):
     
-    query = {"GICS Sub_Industry": { "$regex" : subindustry, "$options" : "i"}}
+    query = {"subIndustry": { "$regex" : subindustry, "$options" : "i"}}
     results = companies.find(query, {"_id" : 0})
     return dumps(results)
 
@@ -84,7 +84,7 @@ def company_by_subindustry(subindustry: str):
 @app.route("/api/v1.0/company/hqlocation/<string:hqlocation>")
 def company_by_hqlocation(hqlocation: str):
     
-    query = {"HQ Location": { "$regex" : hqlocation, "$options" : "i"}}
+    query = {"hqLocation": { "$regex" : hqlocation, "$options" : "i"}}
     results = companies.find(query, {"_id" : 0})
     return dumps(results)
 
@@ -92,7 +92,7 @@ def company_by_hqlocation(hqlocation: str):
 @app.route("/api/v1.0/company/cik/<int:cik>")
 def company_by_cik(cik: int):
     
-    query = {"CIK": cik }
+    query = {"cik": cik }
     results = companies.find(query, {"_id" : 0})
     return dumps(results)
 
