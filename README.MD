@@ -24,17 +24,46 @@ For this project we researched financial records provided by the SEC. The record
 * **SEC Form 10K A** - Annual Report Amendment.  
  
 
-## Source Data : 
-1. Details of compaines included in S&P 500 index including CIK IDs - https://en.wikipedia.org/wiki/List_of_S%26P_500_companies   
+## Source Data
+1. Details of compaines included in the S&P 500 index - https://en.wikipedia.org/wiki/List_of_S%26P_500_companies   
+
+* Screenshot of S&P 500 companies listed in the Wikipedia page
+![Image Info](./source/SP500/SP500_SourceData.png)
 
 2. Finance data of companies as reported to SEC - https://data.sec.gov/api/xbrl/companyfacts/CIK0001701605.json 
 
 * Sample data format of finance data as recevied from SEC Data API
 ![Image Info](./source/etl/image.png)
 
-## Database Design
+## Database Design 
+![Image Info](./design/Database_Design.png)
 
-## Reference:
-https://www.sec.gov/edgar/sec-api-documentation
+## ETL
+
+### Extract
+
+* The CIK IDs for S&P 500 companies are obtained by web scraping WikiPedia page 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'. This is handled by notebook kept under "source/SP500". The company data is saved under 'data/input/SP500.csv'
+
+* The finance data is extracted from SEC Website https://data.sec.gov/api/xbrl/companyfacts/ for each CIK IDs in the S&P500 Index. 
+
+* SEC allows automated download of data from the API only if the following header is setup in the HTTP request
+
+headers = {
+    'User-Agent' : email_id,
+    'Host' : 'data.sec.gov'
+}
+
+### Transform
+
+The data for the following forms are considered for transformation:
+* 8K, 10Q, 10K, 10Q/A, 10K/A 
+
+There are multiple filings found in the data for the same reporting period. The latest filings are only kept to reflect the most recently updated information. The reporting period is extracted based on 'start' and 'end' period provided in each filing
+
+### Load
+The JSON data is constructed based on the database design. The data is loaded into MongoDB database using 'mongoimport' command
+
+## References:
+* https://www.sec.gov/edgar/sec-api-documentation
 
 
