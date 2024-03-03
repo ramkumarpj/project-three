@@ -28,14 +28,21 @@ For this project we researched financial records provided by the SEC. The record
 1. Details of compaines included in the S&P 500 index - https://en.wikipedia.org/wiki/List_of_S%26P_500_companies   
 
 * Screenshot of S&P 500 companies listed in the Wikipedia page
-![Image Info](./source/SP500/SP500_SourceData.png)
+
+- ![Image Info](./source/SP500/SP500_SourceData.png)
 
 2. Finance data of companies as reported to SEC - https://data.sec.gov/api/xbrl/companyfacts/CIK0001701605.json 
 
 * Sample data format of finance data as recevied from SEC Data API
-![Image Info](./source/etl/image.png)
+
+- ![Image Info](./source/etl/image.png)
 
 ## Database Design 
+
+* MongoDB was selected for loading the final dataset. The primary reasons for selecting MongoDB database are 
+  - Schema changes can be acomplished easily in the future 
+   - End user is going to be served with JSON documents, the same format in which the data is saved in the database.
+
 ![Image Info](./design/Database_Design.png)
 
 ## ETL
