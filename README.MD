@@ -58,10 +58,45 @@ headers = {
 The data for the following forms are considered for transformation:
 * 8K, 10Q, 10K, 10Q/A, 10K/A 
 
-There are multiple filings found in the data for the same reporting period. The latest filings are only kept to reflect the most recently updated information. The reporting period is extracted based on 'start' and 'end' period provided in each filing
+There are multiple filings found in the data for the same reporting period. The latest filings are only kept to reflect the most recently updated information.\ 
+
+The reporting period is extracted based on 'start' and 'end' period provided in each filing. The annual filings are identified as quarter 0 (zero) and quartetly filings are identified as 1 thru 4 depending on the reporting quarter.
 
 ### Load
 The JSON data is constructed based on the database design. The data is loaded into MongoDB database using 'mongoimport' command
+
+## API
+
+### Company API
+
+Company API provides endpoint to query company collection.
+Following routes are available:
+
+* /api/v1.0/company/all - Retrieve data on all the companies present in the collection
+* /api/v1.0/company/ticker/<ticker> - Look up company data by ticker symbol
+* /api/v1.0/company/name/<name> - Look up company data by name
+* /api/v1.0/company/sector/<sector> - Look up companies by sector
+* /api/v1.0/company/subindustry/<subindustry> - Look up companies by sub industry
+* /api/v1.0/company/hqlocation/<hqlocation> - Look up companies by Headquarters Location
+* /api/v1.0/company/cik/<cik> - Look up company data by CIK ID
+
+### Finance API
+
+Finance API provides endpoint to query finance collection.
+Following route is available:
+
+* api/v1.0/finance/query - Retrieve finance data based on the query input
+
+Here is a sample finance query that pulls 'NetIncomeLoss' data for year 2023 for CIKs 1551152 & 4977
+sample_finance_query = {
+    "finance_data_query" : {
+        "dataType" : ["NetIncomeLoss"],
+        "qtr" : 0,
+        "year" : 2023,
+        "cik" : [1551152, 4977]
+    } 
+}
+
 
 ## References:
 * https://www.sec.gov/edgar/sec-api-documentation
