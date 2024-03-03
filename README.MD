@@ -107,14 +107,13 @@ MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing 
 
 ## Files
 
-**Data**
+**Project Proposal**
+* ./project\ proposal/SEC Finance_Project3.pdf
 
-* Input Data -
-   - ./data/Input/Sp500.csv
+**DB Design** 
+* File saved from https://studio.hackolade.com ./design/FinanceDB_MongoDB_Model.hck.json
 
-* Output Data -
-   - ./data/output/finance_data.json
-   - ./data/output/company_data.json
+* Database Documentation - ./design/FinanceDB_Design.pdf, ./design/Database_Design.png
 
 **Source**
 
@@ -134,17 +133,18 @@ MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing 
 * Postman scripts for testing API
   - source/api/postman-tests/Project-3.postman_collection.json
 
-**DB Design** 
-* File saved from https://studio.hackolade.com/- ./design/FinanceDB_MongoDB_Model.hck.json
+**Data**
 
-* Database Documentation - ./design/FinanceDB_Design.pdf, ./design/Database_Design.png
+* Input Data -
+   - ./data/Input/Sp500.csv
 
-**Project Proposal**
-* ./project\ proposal/SEC Finance_Project3.pdf
+* Output Data -
+   - ./data/output/finance_data.json
+   - ./data/output/company_data.json
 
 ## Run Instructions
 
-* Open [**S&P500 Info.ipynb**](./source/SP500/S&P500 Info.ipynb) file using Jupyter Notebook
+* Open [**"S&P500 Info.ipynb"**]("./source/SP500/S&P500 Info.ipynb") file using Jupyter Notebook
   - Click on 'Cell > Run All' to run
   - This will create S&P 500 csv file under 'data/input' folder
 
@@ -154,22 +154,17 @@ MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing 
 
 * Data files to be loaded into the MongoDB database are under the directory - data/output
 * Use below commands to import collections to the MongoDB database
-* `mongoimport --type json -d FinanceDB -c companies --drop --jsonArray company_data.json`
-* `mongoimport --type json -d FinanceDB -c finance --drop --jsonArray finance_data.json`
+`mongoimport --type json -d FinanceDB -c companies --drop --jsonArray company_data.json`
+`mongoimport --type json -d FinanceDB -c finance --drop --jsonArray finance_data.json`
 
 * Open 2 terminals to run API endpoints. The source is located under 'source/api'
-* `python company_api.py`
-* `python finance_api.py`
+`python company_api.py`
+`python finance_api.py`
 
 * Use Postman tool to test the API
 * The postman test scripts are located under 'source/api/postman-tests'
 
 ## References:
 * https://www.sec.gov/edgar/sec-api-documentation
-
-# Disclaimer
-This repo was published for educational purposes only. Copyright 2024 edX Boot Camps LLC. All rights reserved.
-
-
 
 
