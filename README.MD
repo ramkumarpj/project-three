@@ -161,8 +161,7 @@ MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing 
   - `python company_api.py`
   - `python finance_api.py`
 
-* Use Postman tool to test the API
-* The postman test scripts are located under 'source/api/postman-tests'
+* Use Postman tool to test the API. Import postman test scripts located under 'source/api/postman-tests' to run the tests.
 
 ## References:
 * https://www.sec.gov/edgar/sec-api-documentation
