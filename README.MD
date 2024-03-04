@@ -107,6 +107,8 @@ sample_finance_query = {
     } 
 }
 
+* Queries on following **DataTypes** are currently supported -  'Revenues', 'SalesRevenueGoodsNet', 'SalesRevenueServicesNet', 'RevenueFromContractWithCustomerIncludingAssessedTax', 'RevenueFromContractWithCustomerExcludingAssessedTax', 'GrossProfit', 'OperatingIncomeLoss', 'NetIncomeLoss', 'ResearchAndDevelopmentExpense', 'SellingAndMarketingExpense', 'ShareBasedCompensation', 'Depreciation', 'AllocatedShareBasedCompensationExpense', 'CostsAndExpenses', 'GeneralAndAdministrativeExpense', 'InterestExpense', 'LeaseAndRentalExpense', 'MarketingAndAdvertisingExpense', 'OtherAccruedLiabilitiesCurrent', 'EntityCommonStockSharesOutstanding', 'EntityPublicFloat'.
+
 ## MongoDB Atlas
 
 MongoDB Atlas is a cloud offering of MongoDB database. In addition to providing managed MongoDB instance, there is a **Charts** feature which can used to create charts based on the data available in MongoDB database. 
