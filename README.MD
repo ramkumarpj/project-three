@@ -64,15 +64,16 @@ headers = {
 
 ### Transform
 
-The data for the following forms are considered for transformation:
-* 8K, 10Q, 10K, 10Q/A, 10K/A 
+* The data for the following forms are considered for transformation:
+  - 8K, 10Q, 10K, 10Q/A, 10K/A 
 
-There are multiple filings found in the data for the same reporting period. The latest filings are only kept to reflect the most recently updated information.\ 
+* There are multiple filings found in the data for the same reporting period. The latest filings are only kept to reflect the most recently updated information.\ 
 
-The reporting period is extracted based on 'start' and 'end' period provided in each filing. The annual filings are identified as quarter 0 (zero) and quartetly filings are identified as 1 thru 4 depending on the reporting quarter.
+* The reporting period is extracted based on 'start' and 'end' period provided in each filing. The annual filings are identified as quarter 0 (zero) and quartetly filings are identified as 1 thru 4 depending on the reporting quarter.
 
 ### Load
-The JSON data is constructed based on the database design. The data is loaded into MongoDB database using 'mongoimport' command
+
+* The JSON data is constructed based on the database design. The data is loaded into MongoDB database using 'mongoimport' command
 
 ## API
 
@@ -96,16 +97,16 @@ Following route is available:
 
 * api/v1.0/finance/query - Retrieve finance data based on the query input
 
-Here is a sample finance query that pulls 'NetIncomeLoss' data for year 2023 for CIKs 1551152 & 4977
+  - Here is a sample finance query that pulls 'NetIncomeLoss' data for year 2023 for CIKs 1551152 & 4977
 
-sample_finance_query = {
+  - sample_finance_query = {
     "finance_data_query" : {
         "dataType" : ["NetIncomeLoss"],
         "qtr" : 0,
         "year" : 2023,
         "cik" : [1551152, 4977]
     } 
-}
+    }
 
 * Queries on following **DataTypes** are currently supported -  'Revenues', 'SalesRevenueGoodsNet', 'SalesRevenueServicesNet', 'RevenueFromContractWithCustomerIncludingAssessedTax', 'RevenueFromContractWithCustomerExcludingAssessedTax', 'GrossProfit', 'OperatingIncomeLoss', 'NetIncomeLoss', 'ResearchAndDevelopmentExpense', 'SellingAndMarketingExpense', 'ShareBasedCompensation', 'Depreciation', 'AllocatedShareBasedCompensationExpense', 'CostsAndExpenses', 'GeneralAndAdministrativeExpense', 'InterestExpense', 'LeaseAndRentalExpense', 'MarketingAndAdvertisingExpense', 'OtherAccruedLiabilitiesCurrent', 'EntityCommonStockSharesOutstanding', 'EntityPublicFloat'.
 
