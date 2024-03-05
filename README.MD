@@ -24,7 +24,12 @@ For this project we researched financial records provided by the SEC. The record
 * **SEC Form 10Q A** - Quarterly Report Amendment. 
 
 * **SEC Form 10K A** - Annual Report Amendment.  
- 
+
+## Ethical Consideration
+
+* SEC is making data available to the public and anyone is free to use it. The limitations for accessing the data in an automated way are the restriction of making 10 requests in 1 second and the HTTP request header should provide a valid email ID and host info.
+
+* The trasformation done to the data as part of this project doesn't alter finance details of a company in any way. There are no ethical concerns to be addressed.
 
 ## Source Data
 1. Details of compaines included in the S&P 500 index - https://en.wikipedia.org/wiki/List_of_S%26P_500_companies   
